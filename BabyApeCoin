@@ -799,7 +799,7 @@ contract ERC20 is Context, IERC20 {
 }
 
 /// Baby ApeCoin
-contract Baby ApeCoin is ERC20("Baby ApeCoin", "Baby Ape"), Ownable {
+contract BabyApeCoin is ERC20("Baby ApeCoin", "BabyApe"), Ownable {
     using Address for address;
     using SafeMath for uint256;
 
@@ -809,7 +809,7 @@ contract Baby ApeCoin is ERC20("Baby ApeCoin", "Baby Ape"), Ownable {
         uint256 votes;
     }
 
-    /// We need mint some Baby Ape in advance
+    /// We need mint some BabyApe in advance
     uint256 public BabyApeInAdvance;
 
     /// The address of Treasury wallet
@@ -839,7 +839,7 @@ contract Baby ApeCoin is ERC20("Baby ApeCoin", "Baby Ape"), Ownable {
     /// An event thats emitted when a delegate account's vote balance changes
     event DelegateVotesChanged(address indexed delegate, uint previousBalance, uint newBalance);
 
-    /// @notice We need mint some Baby Ape in advance
+    /// @notice We need mint some BabyApe in advance
     constructor() public {
         treasuryWalletAddr = _msgSender();
         BabyApeInAdvance = 10000 * 10**6 * 10**18;
